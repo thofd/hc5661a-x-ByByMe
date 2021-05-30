@@ -1,3 +1,5 @@
+来自恩山ByByMe
+
 ### 特别说明 ###
 * 汉化字典来自：https://github.com/gorden5566/padavan
 * 更新日志：https://www.jianshu.com/p/d76a63a12eae
