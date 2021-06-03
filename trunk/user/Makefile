@@ -27,6 +27,7 @@ SOFTETHERVPN_ENABLE=n
 SHADOWSOCKS_ENABLE=n
 FRP_ENABLE=n
 TROJAN_ENABLE=n
+XRAY_ENABLE=n
 
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_OPENSSH),y)
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_DROPBEAR),y)
@@ -71,6 +72,9 @@ FS_NTFS_ENABLED=y
 endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_SMBD),y)
 SAMBA_ENABLED=y
+endif
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_XRAY),y)
+XRAY_ENABLE=y
 endif
 endif
 
@@ -117,6 +121,7 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_NAPT66)		+= napt66
 dir_$(CONFIG_FIRMWARE_INCLUDE_SFE)		+= shortcut-fe
 dir_y						+= infosvr
 dir_y						+= inadyn
+dir_$(XRAY_ENABLE)				+= xray
 dir_y						+= miniupnpd
 dir_y						+= dnsmasq
 dir_y						+= igmpproxy
